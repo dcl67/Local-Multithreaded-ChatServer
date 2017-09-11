@@ -1,0 +1,19 @@
+Local chat server
+
+Runs a server and client instances locally, including across machines SSH'd into the same remote location.
+Note that you will need at least two terminal instances to utilize the server and a client session.
+
+To compile necessary files: $ make    #runs makefile 
+
+In your first terminal, you must first start the server with: $ ./server
+
+To launch a client session, in your second terminal, enter: $ ./client <userid> <room_num>
+	User ID must be unique and is limited to 6 characters.
+	Room number is an integer to join a room with corresponding users.
+	Rooms are limited to 10 users per room.
+
+Options within the chat interface:
+	-dm	-- Sends a direct message that only the specified user within the same chat room can see.
+	-e  -- Exits the chat room. 
+
+NOTE: When all clients are disconnected, the server is exited.
